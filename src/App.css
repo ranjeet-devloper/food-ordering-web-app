@@ -1,0 +1,60 @@
+.image-container
+{
+  height: 100px;
+  width: 100px;
+}
+.logo-img
+{
+  height: 100px;
+  width: 100px;
+  margin-left: 2px;
+}
+
+.header-container
+{
+display: flex;
+justify-content: space-between;
+margin: 2px 5px;
+border: 1px solid grey;
+}
+
+.list-container .list-item 
+{
+ list-style: none;
+ justify-self: center;
+ padding-top: 15px;
+}
+li
+{
+  display: inline;
+  margin: 10px;
+}
+
+.card-container
+{
+  width: 200px;
+  background-color: #f0f0f0;
+  margin: 4px 3px;
+  padding: 5px;
+}
+
+.card-container h4{
+  margin: 4px;
+}
+
+.card-container:hover{
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.res-card-container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-image
+{
+  width: 200px;
+  height: 200px;
+}
