@@ -37,6 +37,22 @@ li
   margin: 4px 3px;
   padding: 5px;
 }
+.shimer
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2px;
+}
+
+.fake-card-container
+{
+  width: 200px;
+  height: 250px;
+  background-color: #ddd4d4;
+  margin: 4px 3px;
+  padding: 5px;
+}
 
 .card-container h4{
   margin: 4px;

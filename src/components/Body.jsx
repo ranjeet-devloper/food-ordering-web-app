@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { resList } from "../utils/mockData";
+import ShimmerUi from "./ShimmerUi";
 const Body = () => {
   //const pk="ranjeet";
 const [resLists,setresLists] = useState([])
@@ -16,8 +17,15 @@ const fetchData = async()=>{
 
    const jsonData = await data.json();
    console.log(jsonData);
-   setresLists(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+   let resData = jsonData.data.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants;
+  //  if(!resData){
+  //   resData = jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
+  //  }
+   setresLists(resData)
 }
+
+
+
 
   return (
     <div className="body-container">
@@ -28,7 +36,7 @@ const fetchData = async()=>{
       </div>
       <div className="res-card-container">
 
-      {resLists.map((cardItems)=><Card key = {cardItems.info.id} cardDetails={cardItems}></Card>)}
+      {resLists.length>0?resLists.map((cardItems)=><Card key = {cardItems.info.id} cardDetails={cardItems}></Card>):<ShimmerUi/>}
 
       </div>
     </div>
